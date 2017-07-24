@@ -152,7 +152,7 @@ $:ls stacks/stack4
 
 **Results**
 
- * Best single model: mixnet_v6: public: 0.92905, private: 0.93071
- * Best blended ensemble: public: 0.93015, private: 0.93217 
+ * Best single model: mixnet_v6: private: 0.92905, public: 0.93071
+ * Best blended ensemble: private: 0.93015, public: 0.93217 
  * Best submit during competition: 0.93023: 0.93168 (also ensemble)
 
