@@ -1,8 +1,7 @@
 
 **Overview**
 
-Kaggle competition https://www.kaggle.com/c/planet-understanding-the-amazon-from-space
-Pytorch code by Edward Tyantov.
+Pytorch code for Kaggle competition https://www.kaggle.com/c/planet-understanding-the-amazon-from-space.
 
 **Project Structure**
 
@@ -110,7 +109,7 @@ Train.py automatically generate submission.csv, with ensemble option on - submis
 
 **Models**
 
-My best single model (mixnetv6) solution consist of following tricks:
+Best single model (mixnetv6) solution consist of following tricks:
  * 6-channel input (3-jpg channel, NIR-chanell, NDWI-index, SAVI-index)
  * model: resnet18 on jpg, resnet 18 on nir+indexes, concat -> 256 embedding FC + final FC
    * jpg branch lr modifier 0.05 to base LR, for nir branch - layer{3,4} - 1.0, layer{2,3} - 0.1, FC - 1.0 
@@ -136,7 +135,7 @@ _Note that this scripts were written in a hurry and are just bunch of ad-hoc cod
 
 Using blend.py and stack.py one can ensemble predictions.
  
- For stacking the code uses out-of-fold prediction, which automatically are done.
+ For stacking the code uses out-of-fold prediction, which are automatically done.
  For blending (learning classifier on a holdout dataset) while training use --holdout to hold 10% of the train dataset (data/holdout.txt)
 
 For stack.py one more prerequisite: 
@@ -145,7 +144,7 @@ For stack.py one more prerequisite:
 
 Usage:
 
-'python2.7 stack.py --folder stacks/stack4'
+`python2.7 stack.py --folder stacks/stack4`
 ```
 $:ls stacks/stack4
 5_densenet121_hv  5_dn169_hv  5_mixnet6_lowLR_hv  5_mixnetv3_hv  5_selu_hv  6_jpg_hv  6_mixnet6_lowLR_hv  7_mixnet6_lowLR_hv  7_wide_hv  8_jpg_hv
@@ -153,7 +152,7 @@ $:ls stacks/stack4
 
 **Results**
 
- * Best single model: mixnet_v6: public: 0.92905, private: 0.93071
- * Best blended ensemble: public: 0.93015, private: 0.93217 
+ * Best single model: mixnet_v6: private: 0.92905, public: 0.93071
+ * Best blended ensemble: private: 0.93015, public: 0.93217 
  * Best submit during competition: 0.93023: 0.93168 (also ensemble)
 
