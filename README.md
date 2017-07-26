@@ -144,7 +144,7 @@ For stack.py one more prerequisite:
 
 Usage:
 
-'python2.7 stack.py --folder stacks/stack4'
+`python2.7 stack.py --folder stacks/stack4`
 ```
 $:ls stacks/stack4
 5_densenet121_hv  5_dn169_hv  5_mixnet6_lowLR_hv  5_mixnetv3_hv  5_selu_hv  6_jpg_hv  6_mixnet6_lowLR_hv  7_mixnet6_lowLR_hv  7_wide_hv  8_jpg_hv
