@@ -2,6 +2,7 @@
 **Overview**
 
 Pytorch code for Kaggle competition https://www.kaggle.com/c/planet-understanding-the-amazon-from-space.
+Overview of this challenge and my solution ([slides](https://www.slideshare.net/Eduardyantov/kaggle-reviewplanet-understanding-the-amazon-from-space))
 
 **Project Structure**
 
