@@ -1,5 +1,6 @@
 #-*- coding: utf8 -*-
 import os, sys, glob, json, numpy as np
+from optparse import OptionParser
 from folder import ImageFolder
 from collections import defaultdict
 from scipy.stats.mstats import gmean
